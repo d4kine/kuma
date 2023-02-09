@@ -21,7 +21,7 @@ func Test() {
 	meshName := "meshhttproute"
 	namespace := "meshhttproute"
 
-	BeforeAll(func() {
+	BeforeEach(func() {
 		suffix := "-" + strings.ToLower(helpers.GetRandomString(7))
 		meshName = meshName + suffix
 		namespace = namespace + suffix
