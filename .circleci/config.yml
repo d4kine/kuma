@@ -385,10 +385,10 @@ jobs:
       name: vm-<< parameters.arch >>
     steps:
     - checkout
-    - when:
-        condition: {equal: [arm64, << parameters.arch >>]}
-        steps:
-          - skip_on_branch
+#    - when:
+#        condition: {equal: [arm64, << parameters.arch >>]}
+#        steps:
+#          - skip_on_branch
     - install_build_tools:
         go_arch: <<parameters.arch>>
     - restore_cache:
