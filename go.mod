@@ -75,7 +75,10 @@ require (
 	sigs.k8s.io/yaml v1.3.0
 )
 
-require github.com/shopspring/decimal v1.3.1
+require (
+	github.com/oracle/oci-go-sdk v7.1.0+incompatible
+	github.com/shopspring/decimal v1.3.1
+)
 
 require (
 	cloud.google.com/go v0.105.0 // indirect
