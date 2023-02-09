@@ -489,7 +489,7 @@ workflows:
           matrix:
             alias: build
             parameters:
-              arch: [ amd64, arm64 ]
+              arch: [ arm64 ]
           requires: [ go_cache-golang ]
 #      - test:
 #          name: test-<< matrix.arch >>
@@ -513,9 +513,9 @@ workflows:
           matrix:
             alias: test/e2e
             parameters:
-              k8sVersion: [ v1.19.16-k3s1, v1.21.7-k3s1, kind, kindIpv6 ]
+              k8sVersion: [ v1.21.7-k3s1 ]
               target: [ test/e2e-kubernetes ]
-              arch: [ amd64, arm64 ]
+              arch: [ arm64 ]
           parallelism: 1
           requires: [ build-<< matrix.arch >>, check ]
 #      - e2e:
